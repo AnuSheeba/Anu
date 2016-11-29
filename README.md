@@ -109,14 +109,17 @@ change the following method as below
         return cell;
     }
     return nil;
-}</pre>
+}
+</pre>
 
 
-<code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
+<code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position
+</code>
 
 For preferredRowHeight
  
-<pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+<pre>
+if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         return 110;
     }
     return 50;
@@ -164,20 +167,22 @@ Change the following values
 
 <code>CGFloat const FSCalendarStandardWeekdayTextSize = 18;</code>
 
-<code>CGFloat const FSCalendarStandardHeaderTextSize = 22;
+<code>
+CGFloat const FSCalendarStandardHeaderTextSize = 22;
 </code>
 
 
- #FSCalendarDynamicHeader.h
+#FSCalendarDynamicHeader.h
 
  <code> import "CustomFSCalendarDelegateProxy.h"
  </code>
 
- #FSCalendarAppearance.h
+#FSCalendarAppearance.h
 
  Append the below to init method
 
- <pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+ <pre>
+ if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSeparatorColor;
             _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];
             _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];
