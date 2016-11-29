@@ -164,3 +164,8 @@ change the following values
 
 <code>CGFloat const FSCalendarStandardHeaderTextSize = 22;</code>
 
+
+#FSCalendarDynamicHeader.h
+
+<code> #import "CustomFSCalendarDelegateProxy.h"</code>
+
