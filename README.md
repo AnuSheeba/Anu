@@ -90,7 +90,7 @@ Change the following methods
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;</code>
 
-add the Deleage method
+Add the Deleage method
 
 <code>- (NSArray NSDictionary *)subtitleForDateAsDict:(NSDate *)date;</code>
 
@@ -114,7 +114,7 @@ change the following method as below
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
 
- For preferredRowHeight
+For preferredRowHeight
  
 <pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         return 110;
@@ -126,13 +126,11 @@ change the following method as below
     
 # FSCalendarCell.h
 
-
- change the string type to array of Dictionary
- 
+Change the string type to array of Dictionary
  
 <code>@property (strong, nonatomic) NSArray NSDictionary  *subtitle;</code>
 
- change the property of placeholder
+Change the property of placeholder
 
 <code>@property (readonly, nonatomic,getter=isPlaceholder) BOOL placeholder;</code>
 
@@ -150,7 +148,7 @@ change the following method as below
 
 change the color code
 
-<code>#define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
+<code>define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
 
 
 #FSCalendarConstants.m
@@ -170,7 +168,7 @@ change the following values
 
 #FSCalendarDynamicHeader.h
 
-<code> #import "CustomFSCalendarDelegateProxy.h"</code>
+<code> import "CustomFSCalendarDelegateProxy.h"</code>
 
 #FSCalendarAppearance.h
 
