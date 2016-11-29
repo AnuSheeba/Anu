@@ -134,7 +134,7 @@ Change the property of placeholder
 
 <code>@property (readonly, nonatomic,getter=isPlaceholder) BOOL placeholder;</code>
 
- # FSCalendarCell.m
+#FSCalendarCell.m
 
  change the following method
 
@@ -144,14 +144,14 @@ Change the property of placeholder
     [self setNeedsLayout];
 }</pre>
 
- # FSCalendarConstants.h
+#FSCalendarConstants.h
 
- Change the color code
+Change the color code
 
 <code>define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
 
 
- # FSCalendarConstants.m
+#FSCalendarConstants.m
 
  Change the following values
 
