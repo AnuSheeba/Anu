@@ -169,3 +169,43 @@ change the following values
 
 <code> #import "CustomFSCalendarDelegateProxy.h"</code>
 
+#FSCalendarAppearance.h
+
+Append the below to init method
+ <pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSeparatorColor;
+            _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];//
+            _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];//Anu changed whiteColor
+
+        }else{
+            _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSelectionColor;
+            _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];//
+            _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];//Anu changed whiteColor
+
+        }
+</pre>
+
+Change the below vaues for iphone and ipad
+ <pre>
+ - (UIFont *)preferredTitleFont
+{
+    return [UIFont fontWithName:_titleFontName size:16];
+}
+
+- (UIFont *)preferredSubtitleFont
+{
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return [UIFont fontWithName:_weekdayFontName size:15];
+    }
+    return [UIFont fontWithName:_weekdayFontName size:10];
+}
+
+- (UIFont *)preferredWeekdayFont
+{
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return [UIFont fontWithName:_weekdayFontName size:15];
+    }
+    return [UIFont fontWithName:_weekdayFontName size:10];
+}
+</pre>
