@@ -144,14 +144,13 @@ Change the property of placeholder
     [self setNeedsLayout];
 }</pre>
 
-#FSCalendarConstants.h
-
+# FSCalendarConstants.h
 change the color code
 
 <code>define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
 
 
-#FSCalendarConstants.m
+# FSCalendarConstants.m
 
 change the following values
 
@@ -166,11 +165,11 @@ change the following values
 <code>CGFloat const FSCalendarStandardHeaderTextSize = 22;</code>
 
 
-#FSCalendarDynamicHeader.h
+# FSCalendarDynamicHeader.h
 
 <code> import "CustomFSCalendarDelegateProxy.h"</code>
 
-#FSCalendarAppearance.h
+# FSCalendarAppearance.h
 
 Append the below to init method
  <pre>
@@ -211,3 +210,29 @@ Change the below vaues for iphone and ipad
     return [UIFont fontWithName:_weekdayFontName size:10];
 }
 </pre>
+
+# FSCalendarWeekdayView.m
+
+Change the font Allignment
+<pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            weekdayLabel.textAlignment = NSTextAlignmentRight;
+        }else{
+            weekdayLabel.textAlignment = NSTextAlignmentCenter;
+        }</pre>
+        
+Width of label in Layout Subviews
+<pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        CGFloat weekdayWidth1 = self.fs_width/self.weekdayLabels.count;
+        weekdayWidth = weekdayWidth1 - 1;
+    }else{
+        weekdayWidth = self.fs_width/self.weekdayLabels.count;
+    }</pre>
+    
+    
+change the symbol in invalidateWeekdaySymbols
+<pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        weekdaySymbols = useVeryShortWeekdaySymbols ? self.calendar.gregorian.veryShortStandaloneWeekdaySymbols : self.calendar.gregorian.shortWeekdaySymbols;//Anu symbol change
+    }else{
+        weekdaySymbols = useVeryShortWeekdaySymbols ? self.calendar.gregorian.veryShortStandaloneWeekdaySymbols : self.calendar.gregorian.veryShortWeekdaySymbols;//Anu symbol change
+        
+}</pre>
