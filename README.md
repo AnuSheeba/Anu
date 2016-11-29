@@ -134,7 +134,7 @@ Change the property of placeholder
 
 <code>@property (readonly, nonatomic,getter=isPlaceholder) BOOL placeholder;</code>
 
-# FSCalendarCell.m
+ # FSCalendarCell.m
 
  change the following method
 
@@ -144,15 +144,14 @@ Change the property of placeholder
     [self setNeedsLayout];
 }</pre>
 
-
-# FSCalendarConstants.h
+ # FSCalendarConstants.h
 
  Change the color code
 
 <code>define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
 
 
-# FSCalendarConstants.m
+ # FSCalendarConstants.m
 
  Change the following values
 
@@ -167,13 +166,14 @@ Change the property of placeholder
 <code>CGFloat const FSCalendarStandardHeaderTextSize = 22;</code>
 
 
-# FSCalendarDynamicHeader.h
+ # FSCalendarDynamicHeader.h
 
-<code> import "CustomFSCalendarDelegateProxy.h"</code>
+ <code> import "CustomFSCalendarDelegateProxy.h"</code>
 
-# FSCalendarAppearance.h
+ # FSCalendarAppearance.h
 
-Append the below to init method
+ Append the below to init method
+
  <pre>
  if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSeparatorColor;
@@ -186,15 +186,14 @@ Append the below to init method
             _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];//Anu changed whiteColor
 
         }
-</pre>
+ </pre>
 
-Change the below vaues for iphone and ipad
+ Change the below vaues for iphone and ipad
  <pre>
  - (UIFont *)preferredTitleFont
 {
     return [UIFont fontWithName:_titleFontName size:16];
 }
-
 - (UIFont *)preferredSubtitleFont
 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -202,10 +201,8 @@ Change the below vaues for iphone and ipad
     }
     return [UIFont fontWithName:_weekdayFontName size:10];
 }
-
 - (UIFont *)preferredWeekdayFont
 {
-    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         return [UIFont fontWithName:_weekdayFontName size:15];
     }
