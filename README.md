@@ -80,27 +80,24 @@ In reloadVisibleCells
 
 For selectCounterpartDate and deselectCounterpartDate create cell as CustomFSCalendarCell
 
-<code>    CustomFSCalendarCell *cell;</code>
+<code> CustomFSCalendarCell *cell;</code>
 
 #FSCalendarDelegateProxy.h
 
 Change the following methods 
 
-<code>- (CustomFSCalendarCell *)cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;
-</code>
+<code>- (CustomFSCalendarCell *)cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;</code>
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;</code>
 
 add the Deleage method
 
-<code>
-- (NSArray NSDictionary *)subtitleForDateAsDict:(NSDate *)date;</code>
+<code>- (NSArray NSDictionary *)subtitleForDateAsDict:(NSDate *)date;</code>
 
 
 #FSCalendarDelegateProxy.m
 
 change the following method as below
-
 
 <pre>- (CustomFSCalendarCell *)cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position
 {
@@ -143,8 +140,7 @@ change the following method as below
 
  change the following method
 
-<pre>
-- (void)setSubtitle:(NSArray NSDictionary *)subtitle
+<pre>- (void)setSubtitle:(NSArray NSDictionary *)subtitle
 {
     _subtitle = subtitle;
     [self setNeedsLayout];
