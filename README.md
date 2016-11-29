@@ -91,3 +91,17 @@ change the following method as below
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
 
 
+#FSCalendarConstants.m
+
+change the following values
+
+<code>CGFloat const FSCalendarStandardMonthlyPageHeight = 330.0;</code>
+
+<code>CGFloat const FSCalendarStandardCellDiameter = 30/3.0;</code>
+
+<code>CGFloat const FSCalendarStandardTitleTextSize = 14;</code>
+
+<code>CGFloat const FSCalendarStandardWeekdayTextSize = 18;</code>
+
+<code>CGFloat const FSCalendarStandardHeaderTextSize = 22;</code>
+
