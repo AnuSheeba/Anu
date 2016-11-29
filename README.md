@@ -7,6 +7,24 @@ Import and use FSCalendarDelegateProxy in FSCalender and FSCalenderDynamicHeader
 
 Import and use FSCalenderCell in FSCalender and FSCalenderDelegateProxy.
 
+#FSCalender.h
+
+import CustomFSCalenderCell
+
+Add the following methods
+
+<code>- (nullable NSArrayNSDictionary *  *)calendar:(FSCalendar *)calendar subtitleForDateAsDict:(NSDate *)date;</code>
+
+<code>- (void)didSelectFirstDateCalendar:(NSDate*)selectedDate;</code>
+
+<code>- (void)didSelectSecondDateCalendar:(NSDate*)selectedDate;</code>
+
+<code>- (void)didSelectThirdDateCalendar:(NSDate*)selectedDate;</code>
+
+<code>- (void)didSelectForthDateCalendar:(NSDate*)selectedDate;</code>
+
+<code>- (void)reloadDataForCell:(FSCalendarCell *)cell atIndexPath:(NSIndexPath *)indexPath;</code>
+
 # FSCalender.m 
 Import CustomFSCalenderCell.h
 
@@ -32,6 +50,9 @@ For register the cell change the following
 In cellForItemAtIndexPath
 
 <code>    CustomFSCalendarCell *cell = [self.proxy cellForDate:[self.calculator dateForIndexPath:indexPath] atMonthPosition:position];</code>
+
+<code>cell.fsCalGlobalObj=self;</code>
+
 
 In didSelectItemAtIndexPath and didDeselectItemAtIndexPath change the cell as customCell
 
@@ -70,6 +91,9 @@ Change the following methods
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;</code>
 
+add the Deleage method
+
+<code>- (NSArray NSDictionary *)subtitleForDateAsDict:(NSDate *)date;</code>
 #FSCalendarDelegateProxy.m
 
 change the following method as below
@@ -89,6 +113,41 @@ change the following method as below
 
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
+
+For preferredRowHeight
+<pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        return 110;
+    }
+    return 50;
+    <pre>
+    
+    
+# FSCalendarCell.h
+
+change the string type to array of Dictionary
+
+<code>@property (strong, nonatomic) NSArray NSDictionary  *subtitle;</code>
+
+change the property of placeholder
+
+<code>@property (readonly, nonatomic,getter=isPlaceholder) BOOL placeholder;</code>
+
+# FSCalendarCell.m
+
+change the following method
+
+<pre>
+- (void)setSubtitle:(NSArray NSDictionary *)subtitle
+{
+    _subtitle = subtitle;
+    [self setNeedsLayout];
+}</pre>
+
+#FSCalendarConstants.h
+
+change the color code
+
+<code>#define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
 
 
 #FSCalendarConstants.m
