@@ -13,4 +13,9 @@ Import CustomFSCalenderCell.h
 change the following method CalenderCell to CustomFSCalenderCell
 
 <code>- (void)invalidateAppearanceForCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date;</code>
-<pre>[collectionView registerClass:[CustomFSCalendarCell class] forCellWithReuseIdentifier:FSCalendarDefaultCellReuseIdentifier];</pre>
+<code>- (NSDate *)dateForCell:(CustomFSCalendarCell *)cell</code>
+<code>- (FSCalendarMonthPosition)monthPositionForCell:(CustomFSCalendarCell *)cell</code>
+<code>- (NSArray<CustomFSCalendarCell *> *)visibleCells</code> 
+
+For register the cell change the following
+<code>[collectionView registerClass:[CustomFSCalendarCell class] forCellWithReuseIdentifier:FSCalendarDefaultCellReuseIdentifier];</code>
