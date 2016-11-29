@@ -148,12 +148,12 @@ Change the property of placeholder
 
 Change the color code
 
-<code>define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
+<code>define FSCalendarStandardSelectionColor FSColorRGBA(31,119,219,1.0)</code>
 
 
 #FSCalendarConstants.m
 
- Change the following values
+Change the following values
 
 <code>CGFloat const FSCalendarStandardMonthlyPageHeight = 330.0;</code>
 
