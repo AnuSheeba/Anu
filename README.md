@@ -142,7 +142,8 @@ Change the property of placeholder
 {
     _subtitle = subtitle;
     [self setNeedsLayout];
-}</pre>
+}
+</pre>
 
 #FSCalendarConstants.h
 
