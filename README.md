@@ -69,3 +69,23 @@ Change the following methods
 </code>
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;</code>
+
+#FSCalendarDelegateProxy.m
+
+change the following method as below
+<code>- (CustomFSCalendarCell *)cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position
+{
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(calendar:cellForDate:atMonthPosition:)]) {
+        CustomFSCalendarCell *cell = [self.dataSource calendar:self.calendar cellForDate:date atMonthPosition:position];
+        if (cell && ![cell isKindOfClass:[CustomFSCalendarCell class]]) {
+            [NSException raise:@"You must return a valid cell in calendar:cellForDate:atMonthPosition:" format:@""];
+        }
+        return cell;
+    }
+    return nil;
+}</code>
+
+
+<code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
+
+
