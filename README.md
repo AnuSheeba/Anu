@@ -145,6 +145,7 @@ Change the property of placeholder
 }</pre>
 
 # FSCalendarConstants.h
+
 change the color code
 
 <code>define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
