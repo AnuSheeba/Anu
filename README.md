@@ -164,29 +164,28 @@ Change the following values
 
 <code>CGFloat const FSCalendarStandardWeekdayTextSize = 18;</code>
 
-<code>CGFloat const FSCalendarStandardHeaderTextSize = 22;</code>
+<code>CGFloat const FSCalendarStandardHeaderTextSize = 22;
+</code>
 
 
- # FSCalendarDynamicHeader.h
+ #FSCalendarDynamicHeader.h
 
- <code> import "CustomFSCalendarDelegateProxy.h"</code>
+ <code> import "CustomFSCalendarDelegateProxy.h"
+ </code>
 
- # FSCalendarAppearance.h
+ #FSCalendarAppearance.h
 
  Append the below to init method
 
- <pre>
- if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+ <pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSeparatorColor;
-            _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];//
-            _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];//Anu changed whiteColor
-
-        }else{
+            _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];
+            _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];
+            }else{
             _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSelectionColor;
-            _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];//
-            _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];//Anu changed whiteColor
-
-        }
+            _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];
+            _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];
+            }
  </pre>
 
  Change the below vaues for iphone and ipad
