@@ -73,7 +73,9 @@ Change the following methods
 #FSCalendarDelegateProxy.m
 
 change the following method as below
-<code>- (CustomFSCalendarCell *)cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position
+
+
+<pre>- (CustomFSCalendarCell *)cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position
 {
     if (self.dataSource && [self.dataSource respondsToSelector:@selector(calendar:cellForDate:atMonthPosition:)]) {
         CustomFSCalendarCell *cell = [self.dataSource calendar:self.calendar cellForDate:date atMonthPosition:position];
@@ -83,7 +85,7 @@ change the following method as below
         return cell;
     }
     return nil;
-}</code>
+}</pre>
 
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
