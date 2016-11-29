@@ -124,19 +124,19 @@ For preferredRowHeight
     
 # FSCalendarCell.h
 
-change the string type to array of Dictionary
+ change the string type to array of Dictionary
 
-<code>@property (strong, nonatomic) NSArray NSDictionary  *subtitle;</code>
+ <code>@property (strong, nonatomic) NSArray NSDictionary  *subtitle;</code>
 
-change the property of placeholder
+ change the property of placeholder
 
-<code>@property (readonly, nonatomic,getter=isPlaceholder) BOOL placeholder;</code>
+ <code>@property (readonly, nonatomic,getter=isPlaceholder) BOOL placeholder;</code>
 
 # FSCalendarCell.m
 
-change the following method
+ change the following method
 
-<pre>
+ <pre>
 - (void)setSubtitle:(NSArray NSDictionary *)subtitle
 {
     _subtitle = subtitle;
@@ -145,14 +145,14 @@ change the following method
 
 #FSCalendarConstants.h
 
-change the color code
+ change the color code
 
-<code>#define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
+ <code>#define FSCalendarStandardSelectionColor   FSColorRGBA(31,119,219,1.0)</code>
 
 
 #FSCalendarConstants.m
 
-change the following values
+ change the following values
 
 <code>CGFloat const FSCalendarStandardMonthlyPageHeight = 330.0;</code>
 
