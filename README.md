@@ -93,7 +93,10 @@ Change the following methods
 
 add the Deleage method
 
-<code>- (NSArray NSDictionary *)subtitleForDateAsDict:(NSDate *)date;</code>
+<code>
+- (NSArray NSDictionary *)subtitleForDateAsDict:(NSDate *)date;</code>
+
+
 #FSCalendarDelegateProxy.m
 
 change the following method as below
@@ -114,7 +117,8 @@ change the following method as below
 
 <code>- (void)willDisplayCell:(CustomFSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position</code>
 
-For preferredRowHeight
+ For preferredRowHeight
+ 
 <pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         return 110;
     }
@@ -122,7 +126,9 @@ For preferredRowHeight
     </pre>
     
     
+    
 # FSCalendarCell.h
+
 
  change the string type to array of Dictionary
 
@@ -172,7 +178,8 @@ For preferredRowHeight
 #FSCalendarAppearance.h
 
 Append the below to init method
- <pre>if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+ <pre>
+ if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             _backgroundColors[@(FSCalendarCellStateSelected)]    =FSCalendarStandardSeparatorColor;
             _subtitleColors[@(FSCalendarCellStateToday)]       = [UIColor whiteColor];//
             _subtitleColors[@(FSCalendarCellStateSelected)]    = [UIColor whiteColor];//Anu changed whiteColor
