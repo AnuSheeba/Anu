@@ -193,9 +193,9 @@ CGFloat const FSCalendarStandardHeaderTextSize = 22;
             }
  </pre>
 
- Change the below vaues for iphone and ipad
+Change the below vaues for iphone and ipad
  <pre>
- - (UIFont *)preferredTitleFont
+- (UIFont *)preferredTitleFont
 {
     return [UIFont fontWithName:_titleFontName size:16];
 }
